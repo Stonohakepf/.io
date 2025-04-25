@@ -1,0 +1,273 @@
+/*
+* Background Images - Practice
+* Enhanced CSS Styles
+*/
+
+/* General */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background-color: #121212;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Metal Mania', cursive;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    background-color: #e91e63;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #d81b60;
+}
+
+/* Header */
+header {
+    background: url(../img/bg-01.jpg) no-repeat center center/cover;
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+
+#topbar {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    width: 100%;
+}
+
+nav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+nav ul.menu li {
+    display: inline-block;
+}
+
+nav ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 20px;
+    transition: color 0.3s;
+}
+
+nav ul.menu li a:hover {
+    color: #e91e63;
+}
+
+nav ul.menu li:first-child a {
+    background-color: #e91e63;
+    border-radius: 4px;
+}
+
+header h1 {
+    font-size: 60px;
+    margin-top: 120px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    letter-spacing: 5px;
+}
+
+header .button {
+    margin-top: 20px;
+}
+
+/* Tour Section */
+#tour {
+    padding: 60px 0;
+    background-color: #2b2b2b;
+}
+
+#tour .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#tour .container h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#tour .tour-card {
+    width: 18%;
+    margin: 10px;
+    padding: 70px 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    height: 120px;
+    color: #fff;
+    position: relative;
+}
+
+#tour .tour-card.madrid {
+    background: url('../img/tour/madrid.jpg') no-repeat center center/cover;
+}
+
+#tour .tour-card.turin {
+    background: url('../img/tour/turin.jpg') no-repeat center center/cover;
+}
+
+#tour .tour-card.hamburg {
+    background: url('../img/tour/hamburg.jpg') no-repeat center center/cover;
+}
+
+#tour .tour-card.krakow {
+    background: url('../img/tour/krakow.jpg') no-repeat center center/cover;
+}
+
+#tour .tour-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+#tour .tour-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.tour-card .button {
+    background-color: #e91e63;
+    display: block;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    width: 60%;
+}
+
+/* Gallery */
+#gallery {
+    padding: 60px 0;
+    background-color: #2b2b2b;
+}
+
+#gallery h2 {
+    margin-bottom: 40px;
+}
+
+#gallery .photo {
+    width: 30%;
+    display: inline-block;
+    margin: 1%;
+    box-sizing: border-box;
+}
+
+#gallery .photo img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Subscribe */
+#subscribe {
+    background: url('../img/bg-02.jpg') no-repeat center center/cover;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#subscribe .pitch h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+#subscribe .pitch p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+#subscribe .subscribe-form {
+    display: inline-block;
+}
+
+#subscribe .subscribe-form input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    height: 40px;
+}
+
+#subscribe .subscribe-form button {
+    padding: 0 20px;
+    height: 40px;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#subscribe .subscribe-form button:hover {
+    background-color: #d81b60;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #e91e63;
+}
+
+footer .social {
+    margin-bottom: 20px;
+}
+
+footer .copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
