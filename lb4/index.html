@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна №7 — Варіант 18</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        h2 { color: darkblue; }
+        .task { margin-bottom: 40px; }
+        img { width: 300px; border-radius: 10px; }
+        .captcha { font-weight: bold; font-size: 22px; letter-spacing: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="task">
+        <h2>1. Конвертація температур</h2>
+        <label>Фаренгейт: <input type="number" id="f"></label>
+        <label>Цельсій: <input type="number" id="c"></label>
+    </div>
+
+    <div class="task">
+        <h2>2. Перевірка знання таблиці множення</h2>
+        <div id="score1">Рахунок: 0</div>
+        <div id="question1"></div>
+        <input type="number" id="answer1">
+        <button id="check1">Перевірити</button>
+        <button id="next1">Наступне</button>
+        <div id="result1"></div>
+    </div>
+
+    <div class="task">
+        <h2>3. Таблиця множення (радіокнопки)</h2>
+        <div id="question2"></div>
+        <div id="answers2"></div>
+        <div id="result2"></div>
+        <button id="next2">Наступне</button>
+    </div>
+
+    <div class="task">
+        <h2>4. Перегляд зображень — Квіти</h2>
+        <div id="rotator"></div>
+    </div>
+
+    <div class="task">
+        <h2>5. Капча</h2>
+        <div id="captcha" class="captcha"></div>
+        <input type="text" id="captchaInput" placeholder="Введіть число">
+        <button id="checkCaptcha">Перевірити</button>
+        <div id="captchaResult"></div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
