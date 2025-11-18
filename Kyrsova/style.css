@@ -1,0 +1,989 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #161618;
+}
+
+header {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #0e0e0e;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo img {
+  height: 22px;
+}
+
+.burger {
+  width: 28px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.burger i {
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+.nav-header.active {
+  display: flex;
+}
+
+.nav-header {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: #0e0e0e;
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.nav-header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-header li {
+  font-size: 16px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.log-in {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sign-up {
+  background: #5e6ad2;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sign-up:hover {
+  background: #4c57b3;
+}
+
+.hero-section {
+  padding: 120px 16px 60px;
+  text-align: center;
+}
+
+.hero-img img {
+  width: 140px;
+  margin: 0 auto 80px;
+  display: block;
+}
+
+.hero-img span {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #ff6a3d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.hero-content span {
+  display: block;
+  margin: 120px auto;
+  font-size: 16px;
+  max-width: 320px;
+  color: #aaa;
+}
+
+.hero-video {
+  margin: 40px auto 120px;
+  width: 100%;
+  max-width: 1200px;
+  height: 300px;
+  border-radius: 12px;
+  background: url("image/Article.svg") no-repeat center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn {
+  background: #fff;
+  color: #000;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.play-btn::before {
+  content: "▶";
+  font-size: 14px;
+}
+
+.hero-text {
+  margin-top: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-text span {
+  font-size: 15px;
+  color: #aaa;
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slack-section {
+  padding: 40px 16px;
+  background-color: #161618;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slack-line {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 2px solid gray;
+}
+
+.slack-line .slack-img {
+  height: 20px;
+  position: relative;
+  right: 20px;
+  color: #99BCFE;
+}
+
+.card-title {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-title .title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.card-title .subtitle {
+  font-size: 15px;
+  color: #aaa;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.slack-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.slack-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.slack-card {
+  display: flex;
+  flex-direction: column;
+  background: #1e1e20;
+  border-radius: 12px;
+  padding: 24px;
+  width: 80%;
+  justify-content: space-around;
+}
+
+.slack-card span {
+  display: block;
+  font-size: 14px;
+  color: #99BCFE;
+  margin-bottom: 8px;
+}
+
+.slack-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.slack-card img {
+  border-radius: 8px;
+  margin: 16px;
+  object-fit: cover;
+}
+
+.templates {
+  background: linear-gradient(222deg, rgba(49, 58, 96, 1) 0%, rgba(78, 92, 110, 1) 100%);
+}
+
+.templates span {
+  color: #fff;
+}
+
+.templates h2 {
+  color: #99BCFE;
+}
+
+.linear-section {
+  padding: 40px 16px;
+  background-color: #161618;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.linear-line {
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 2px solid gray;
+  max-width: 990px;
+}
+
+.linear-line .linear-img {
+  height: 20px;
+  position: relative;
+  right: 20px;
+  color: #99BCFE;
+}
+
+.linear-section .linear-title {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.linear-section .linear-title .title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.linear-section .linear-title .subtitle {
+  font-size: 15px;
+  color: #aaa;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.linear-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.linear-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.linear-card {
+  display: flex;
+  flex-direction: column;
+  background: #1e1e20;
+  border-radius: 12px;
+  padding: 24px;
+  width: 80%;
+  justify-content: space-around;
+}
+
+.linear-card span {
+  display: block;
+  font-size: 14px;
+  color: #99BCFE;
+  margin-bottom: 8px;
+}
+
+.linear-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.linear-card img {
+  border-radius: 8px;
+  margin: 16px;
+  object-fit: cover;
+}
+
+.linear-row:first-child .sync {
+  order: 1;
+}
+
+.linear-row:first-child .triage {
+  order: 2;
+}
+
+.triage {
+  background: linear-gradient(222deg, #32346A 0%, #4E4F75 100%);
+}
+
+.juni {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0px 0px 48px 30px rgba(27, 27, 27, 0.6);
+  margin: 70px auto;
+  max-width: 990px;
+  flex-direction: column;
+}
+
+.juni h3 {
+  font-size: 23px;
+  max-width: 410px;
+  margin: 5px;
+}
+
+.juni span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.wokrflows-section {
+  padding: 40px 16px;
+  background-color: #161618;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workflows-line {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 2px solid gray;
+}
+
+.workflows-line .workflows-img {
+  height: 20px;
+  position: relative;
+  right: 20px;
+  color: #8A8F98;
+}
+
+
+.workflows-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.workflows-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.workflows-card {
+  display: flex;
+  flex-direction: column;
+  background: #1e1e20;
+  border-radius: 12px;
+  padding: 24px;
+  width: 80%;
+  justify-content: space-around;
+}
+
+.workflows-card span {
+  display: block;
+  font-size: 14px;
+  color: #99BCFE;
+  margin-bottom: 8px;
+}
+
+.workflows-card span b {
+  background-color: #5E6AD2;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.workflows-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.workflows-card img {
+  border-radius: 8px;
+  margin: 16px;
+  object-fit: cover;
+}
+
+.insights {
+  background: linear-gradient(198deg,rgba(79, 93, 95, 1) 40%, rgba(51, 62, 88, 1) 100%);
+}
+
+.workflows-card.insights h2{
+  color: #89D4C7;
+}
+.workflows-card.insights span{
+  color: #fff;
+}
+
+.use-linear {
+  padding: 40px 16px;
+  background: #161618;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.use-linear-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.use-linear-title .title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.use-linear-title .subtitle {
+  font-size: 15px;
+  color: #aaa;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.use-linear-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.card-use {
+  display: flex;
+  flex-direction: column;
+  background: #1e1e20;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+}
+
+.card-use span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.card-use h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.card-use img {
+  border-radius: 8px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.free-trial {
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.free-trial .logo {
+  width: 212px;
+  height: auto;
+  margin: 120px auto;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.description {
+  max-width: 472px;
+  font-size: 17px;
+  color: #a3a3c2;
+  margin-bottom: 20px;
+  display: block;
+  margin: 20px auto;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.try-btn, .demo-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.try-btn {
+  background-color: #5E6AD2;
+}
+
+.demo-btn {
+  background-color: #000000;
+}
+
+.new-subscribers {
+  font-size: 12px;
+  color: #8A8F98;
+  position: relative;
+  right: 65px;
+}
+.fa-brands{
+  color: #8A8F98;
+}
+
+footer {
+  margin-top: 80px;
+  background-color: #131212;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column; 
+  gap: 40px;
+  max-width: 1264px;
+  margin: 0 auto;
+}
+
+.social-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #8A8F98;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.nav-footer ul {
+  color: #ffffff;
+  list-style: none;
+}
+
+.nav-footer ul li:first-child {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.nav-footer a {
+  color: #8A8F98;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-footer ul li {
+  margin: 6px 0;
+}
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .nav-header {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: transparent;
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  .nav-header ul {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .registration {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .hero-img img {
+    width: 180px;
+  }
+
+  .hero-content span {
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text span {
+    font-size: 16px;
+  }
+
+  .hero-video {
+    height: 360px;
+  }
+
+  .slack-line {
+    max-width: 990px;
+    margin: 0 auto;
+  }
+
+  .card-title {
+    gap: 130px;
+    flex-direction: row;
+    max-width: 990px;
+    margin: 50px auto 70px;
+  }
+
+  .card-title .title {
+    font-size: 32px;
+  }
+
+  .card-title .subtitle {
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .slack-card span {
+    font-size: 15px;
+  }
+
+  .slack-card h2 {
+    font-size: 21px;
+  }
+  .use-linear-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .card-use {
+    width: calc(50% - 10px);
+  }
+  .juni{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px 60px;
+  }
+
+  .nav-footer ul {
+    flex: 1 1 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 20px 60px;
+  }
+
+  .hero-section {
+    padding: 160px 20px 100px;
+  }
+
+  .hero-img img {
+    width: 200px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+  .hero-video {
+    height: 657px;
+  }
+
+  .slack-section {
+    padding: 60px 40px;
+  }
+
+  .slack-content {
+    gap: 20px;
+    max-width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+  }
+
+  .slack-row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .slack-card.templates {
+    width: 690px;
+    height: 412px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slack-card.templates div {
+    flex: 1;
+  }
+
+  .slack-card.templates img {
+    width: 50%;
+    margin: 0 0 0 20px;
+  }
+
+  .slack-card.asks {
+    width: 486px;
+    height: 412px;
+  }
+
+  .slack-card.triggers {
+    width: 588px;
+    height: 350px;
+  }
+
+  .slack-card.updates {
+    width: 588px;
+    height: 361px;
+  }
+
+  .linear-content {
+    gap: 20px;
+    max-width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+  }
+
+  .linear-row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .linear-card.triage {
+    width: 690px;
+    height: 442px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .linear-card.triage span {
+    color: #fff;
+  }
+
+  .linear-card.triage h2 {
+    color: #99BCFE;
+    width: 185px;
+  }
+
+
+  .linear-card.triage div {
+    flex: 1;
+  }
+
+  .linear-card.triage img {
+    width: 57%;
+    margin: 0 0 0 20px;
+    position: relative;
+    left: 25px;
+  }
+
+  .linear-card.sync {
+    width: 486px;
+    height: 441px;
+  }
+
+  .linear-card.sync img {
+    position: relative;
+    left: 40px;
+  }
+
+  .linear-card.speed {
+    width: 588px;
+    height: 366px;
+  }
+
+  .linear-card.teams {
+    width: 588px;
+    height: 366px;
+  }
+
+  .linear-card.teams img {
+    position: relative;
+    bottom: 55px;
+    left: 40px;
+  }
+
+  .workflows-content {
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .workflows-row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .workflows-card.insights {
+    width: 690px;
+    height: 486px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .workflows-card.insights div {
+    flex: 1;
+  }
+
+  .workflows-card.insights img {
+    width: 356px;
+    position: relative;
+    right: 45px;
+    bottom: 4px;
+    margin: 0 0 0 20px;
+  }
+
+  .workflows-card.responsibility {
+    width: 486px;
+    height: 458px;
+  }
+
+  .workflows-card.deadlines {
+    width: 1200px;
+    height: 167px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .workflows-card.deadlines img {
+    height: 100%;
+    width: auto;
+    margin: 0 20px 0 0;
+  }
+  .card-use {
+    width: calc(33.333% - 14px);
+    min-height: 250px;
+  }
+
+  .footer-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .nav-footer {
+    flex-wrap: nowrap;
+    gap: 60px;
+  }
+
+  .nav-footer ul {
+    flex: 0 0 180px;
+  }
+}
